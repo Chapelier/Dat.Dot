@@ -1,0 +1,16 @@
+test
+XXXXXXXXXX
+XB       X
+X    C   X
+X     I  X
+X        X
+X  C   T X
+X        E
+X    C   X
+X        X
+XXXXXXXXXX
+#info:(hello)My friend
+#tp:(6,7)
+#switch:[0](3,3) (2,3) (3,2)
+#switch:[3](5,4) (4,3) (5,2) (6,3)
+#switch:[4](7,7)

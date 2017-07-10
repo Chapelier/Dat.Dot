@@ -1,0 +1,22 @@
+test
+XXXXXXXXXX
+XCX    CXX
+X CX   BCX
+X  XXX   X
+X  XC X  X
+X  XXTX  X
+X TEXXXX X
+XX T   CXX
+X C     CX
+XXXXXXXXXX
+#switch:[1](1,2)
+#switch:[1](1,2) (7,8)
+#switch:[1](1,3)
+#switch:[1](3,5) (4,6)
+#switch:[1](7,2) (8,3) (3,5) (4,6)
+#switch:[1](6,8)
+#switch:[1](7,2) (8,3)
+#switch:[1](7,8)
+#tp:(6,3)
+#tp:(1,8)
+#tp:(1,8)

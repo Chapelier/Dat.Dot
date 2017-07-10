@@ -1,0 +1,31 @@
+MLG
+XXXXXXXXXX
+XCXCXXETBX
+XC  X XXTX
+XXXXTXCTXX
+XCCXC XXTX
+XXXXX TX X
+X  XC XXCX
+X XXTXC XX
+XC TXC   X
+XXXXXXXXXX
+#tp:(5,2)
+#tp:(7,3)
+#tp:(2,2)
+#tp:(8,4)
+#tp:(6,5)
+#tp:(8,5)
+#tp:(5,8)
+#tp:(8,1)
+#switch:[1](2,2)
+#switch:[1](6,1) (6,2)
+#switch:[1](2,3) (3,2)
+#switch:[1](1,5)
+#switch:[1](5,1) (6,2)
+#switch:[1](5,2) (6,1)
+#switch:[2](2,2) (4,5) (5,4)
+#switch:[1](8,2)
+#switch:[1](5,8) (7,8)
+#switch:[1](5,8) (5,4) (2,3) (3,2)
+#switch:[1](8,2)
+#switch:[1](8,6)

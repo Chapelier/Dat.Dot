@@ -1,0 +1,14 @@
+test
+XXXXXXXXXX
+XB       X
+X        X
+X   T    X
+X        E
+X        X
+X     I  X
+X        X
+XC       X
+XXXXXXXXXX
+#tp:(5,5)
+#info:(test)HELLO
+#switch:[3](0,0)

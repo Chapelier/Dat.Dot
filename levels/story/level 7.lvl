@@ -1,0 +1,16 @@
+A little more ;)
+XXXXXXXXXXXXXXX
+XB            X
+X             X
+X      X      X
+X      X      X
+X      X    C X
+X C    X      X
+X      X      X
+XX XXX XXXXXXXX
+XEXXCX X     CX
+XXXXXXXXXXXXXXX
+#switch:[2](8,2) (1,7) (2,7) (8,13)
+#switch:[1](8,2) (9,2) (8,8)
+#switch:[1](9,7)
+#switch:[2](8,4) (9,2) (1,7) (2,7) (8,13)

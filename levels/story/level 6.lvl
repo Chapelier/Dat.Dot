@@ -1,0 +1,14 @@
+A bit more difficuly
+xxxxxxxxxx
+xB       x
+x xCxxCx x
+xx xE x  x
+x  x  x  x
+x Cx  xC x
+x x    x x
+x x    x x
+xxxxxxxxxx
+#switch:[2](1,2) (1,7) (7,7) (7,2)
+#switch:[1](1,7) (6,8) (3,1)
+#switch:[3](2,2)
+#switch:[1](6,8) (1,7)

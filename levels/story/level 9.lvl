@@ -1,0 +1,18 @@
+Not so easy this time
+xxxxxxxxxxxxxxxxx
+xB    xTx     xCx
+x     x x     x x
+x       xC      x
+xC      x       x
+x       x       x
+x       x       x
+x   xxxxxC      x
+x     x    xxxxxx
+x     xCx    xx E
+xxxxxxxxxxxxxxxxx
+#tp:(12,9)
+#switch:[10](9,11) (9,14) (2,7) (8,8) (8,6)
+#switch:[10](9,15)
+#switch:[10](3,8)
+#switch:[1](2,7) (2,15) (8,7)
+#switch:[10](9,13) (8,8)

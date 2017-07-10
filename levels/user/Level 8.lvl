@@ -1,0 +1,13 @@
+test
+XXXXXXXXXX
+X        X
+X B      X
+X        X
+X   TC   X
+X        X
+X E      X
+X        X
+X        X
+XXXXXXXXXX
+#tp:(6,2)
+#switch:[1](4,4) (5,5) (5,4)

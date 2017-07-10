@@ -1,0 +1,22 @@
+LE NIVEAU ULTIME
+XXXXXXXXXXX
+X   XEX   X
+X   X X   X
+XXXXXCXXXXX
+X   XCX   X
+X T X X T X
+X T     T X
+X   X X   X
+XXXXX XXXXX
+X   XIX   X
+X   XIX   X
+X   XBX   X
+XXXXXXXXXXX
+#tp:(1,1)
+#tp:(1,1)
+#tp:(1,1)
+#tp:(1,1)
+#switch:[1](2,5)
+#switch:[1](2,5)
+#info:(MEGA TEST)La case du haut
+#info:(MEGATEST2SANSESPACEPSKOSEF)La case en dessous de celle du haut
