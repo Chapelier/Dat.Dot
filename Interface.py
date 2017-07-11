@@ -58,11 +58,6 @@ class Interface():
 		self.level = None
 		self.skip_intro = False
 
-		# self.height_window, self.width_window = self.screenAdaptator(SCREEN_INFO_Y, SCREEN_INFO_X)
-		# dx, dy = int((SCREEN_INFO_X-self.width_window)/2), int((SCREEN_INFO_Y-self.height_window)/2)
-		# self.window.geometry("{}x{}+{}+{}".format(self.width_window, self.height_window, dx, dy))
-		# self.canvas.config(bg='#9af4fc', width=self.width_window, height=self.height_window)
-
 		self.processbar.next()
 		self.passwords = []
 		# On lit le fichier des mots de passe
