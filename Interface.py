@@ -7,6 +7,7 @@ except ImportError:
 import ctypes
 import glob
 from os.path import exists
+import os
 from time import sleep
 from math import sqrt
 from Levels import Level
@@ -320,44 +321,52 @@ class Interface():
 		on lui propose de quitter ou de recommencer
 		"""
 
-		file = "levels/{}/level {}.lvl".format(self.current_session, level)
-		if exists(file):
-			# Il reste un niveaux, que l'on charge
-			self.current_level = level
-			self.level = Level.fromFile(file)
-			self.level.canvas = self.canvas
-			self.window.title(file.replace('.lvl', '').replace('levels/', '') + ' : ' + self.level.name)
-			self.canvas.delete(ALL)
-			self.level.draw()
-			# On relance le chronomètre
-			self.stopClock()
-			self.update_clock(0)
-			# On bind les touches de déplacement et
-			# celle pour recommencer
-			event_functions = {'<Up>': self.move,
-							'<Down>': self.move,
-							'<Left>': self.move,
-							'<Right>': self.move,
-							'<r>': lambda var : self.nextLevel(self.current_level)}
-			self.event("bind", event_functions)
-			# On bind les codes de triche
-			for key in range(10):
-				self.event("bind", {str(key): self.getAcces})
-		else:
-			# Tout les niveaux sont réussit, on demande
-			# à l'utilisateur s'il veux quitter ou recommencer
-			titre = "Game over !"
-			msg = "Congratulations :)"
+		path = "levels/{}".format(self.current_session)
+		if os.listdir(path) == []:
+			title = "No such file"
+			msg = "There is no level in this place, sorry"
 			icone = "info"
-			messagebox.showinfo(titre, msg, icon=icone)
-
-			titre = "Now what ?"
-			msg = "Leave ?"
-			leave = messagebox.askquestion(titre, msg)
-			if leave == 'yes':
-				self.window.destroy()
+			messagebox.showinfo(title, msg, icon=icone)
+			self.menu()
+		else:
+			file = path + "/level {}.lvl".format(level)
+			if exists(file):
+				# Il reste un niveaux, que l'on charge
+				self.current_level = level
+				self.level = Level.fromFile(file)
+				self.level.canvas = self.canvas
+				self.window.title(file.replace('.lvl', '').replace('levels/', '') + ' : ' + self.level.name)
+				self.canvas.delete(ALL)
+				self.level.draw()
+				# On relance le chronomètre
+				self.stopClock()
+				self.update_clock(0)
+				# On bind les touches de déplacement et
+				# celle pour recommencer
+				event_functions = {'<Up>': self.move,
+								'<Down>': self.move,
+								'<Left>': self.move,
+								'<Right>': self.move,
+								'<r>': lambda var : self.nextLevel(self.current_level)}
+				self.event("bind", event_functions)
+				# On bind les codes de triche
+				for key in range(10):
+					self.event("bind", {str(key): self.getAcces})
 			else:
-				self.menu()
+				# Tout les niveaux sont réussit, on demande
+				# à l'utilisateur s'il veux quitter ou recommencer
+				titre = "Game over !"
+				msg = "Congratulations :)"
+				icone = "info"
+				messagebox.showinfo(titre, msg, icon=icone)
+
+				titre = "Now what ?"
+				msg = "Leave ?"
+				leave = messagebox.askquestion(titre, msg)
+				if leave == 'yes':
+					self.window.destroy()
+				else:
+					self.menu()
 
 	def passwordsMenu(self):
 		self.window.title("Enter a password")
