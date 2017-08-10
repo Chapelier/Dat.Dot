@@ -6,7 +6,7 @@ class Level(object):
 	Objet "niveau" pour le jeu DAT.DOT
 	"""
 
-	##################### Lecture d'un fichier #####################
+	##################### Lecture / écriture d'un fichier #####################
 	
 	@staticmethod
 	def readLine(line, genre):
@@ -69,6 +69,28 @@ class Level(object):
 
 		return Level(name, grid, player, file.name)
 
+	def save(self):
+
+		car = {}
+		for key in Cases.default_car.keys():
+			car[Cases.default_car[key]] = key
+
+		with open(self.path, 'w') as file:
+			file.write(self.name+'\n')
+
+			datas = []
+			for ligne in self.grid:
+				for case in ligne:
+					file.write(car[str(case)])
+					if case in ('Tp', 'Info', 'Switch'):
+						datas.append((str(case).lower(), case.toLine()))
+				file.write('\n')
+
+			for data in datas:
+				file.write("#{type}:{content}\n".format(type=data[0], content=data[1]))
+
+	##################### Général #####################
+
 	def __init__(self, name, grid, player, path=None):
 		self.name = name
 		self.grid = grid
@@ -100,7 +122,8 @@ class Level(object):
 						cords[1][0]-5, cords[1][1]-5, fill=self.grid[i][j].color, width=3)
 				else:
 					self.grid[i][j].img = self.canvas.create_rectangle(cords[0][0], cords[0][1],
-						cords[1][0], cords[1][1], fill=self.grid[i][j].color)
+						cords[1][0], cords[1][1], fill=self.grid[i][j].color,
+						tag="{},{}".format(i, j))
 
 	def movePlayer(self, cap):
 		Up = 0, -1
