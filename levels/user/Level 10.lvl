@@ -1,0 +1,15 @@
+Test
+XXXXXXXXXX
+XB       X
+X        X
+X        X
+X       IX
+X    C   X
+X     C  X
+X        X
+X   T   EX
+XXXXXXXXXX
+#info:(Hello !)How are you ?
+#switch:[3](5,7) (4,6) (3,5) (7,5) (6,4) (5,3)
+#switch:[3](6,8) (5,7) (4,6) (6,4) (7,5) (8,6)
+#tp:(4, 4)
