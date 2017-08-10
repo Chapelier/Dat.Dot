@@ -21,8 +21,12 @@ class Cases(object):
 		self.img = tk_case
 		self.color = ""
 		self.car = ''
+		self.empty = False
 
 	def __repr__(self):
+		return self.__class__.__name__
+
+	def __str__(self):
 		return self.__class__.__name__
 
 	def __eq__(self, obj):
@@ -72,6 +76,9 @@ class Info(Cases):
 		name, message = line[1:end], line[end+1:]
 		return cls(name, message)
 
+	def toLine(self):
+		return "({name}){msg}".format(name=self.name, msg=self.message)
+
 class Exit(Cases):
 
 	def __init__(self, tk_case=None):
@@ -89,8 +96,12 @@ class Switch(Cases):
 	@classmethod
 	def fromLine(cls, line):
 		end = line.index(']')
-		uses, case_to_change = int(line[1:end]), line[end+1:].split(' ')
-		return cls(uses, [eval(x) for x in case_to_change])
+		uses, cases_to_change = int(line[1:end]), line[end+1:].split(' ')
+		return cls(uses, [eval(x) for x in cases_to_change])
+
+	def toLine(self):
+		cases = [str(case).replace(' ', '') for case in self.cases_to_change]
+		return "[{uses}]{cases}".format(uses=self.uses, cases=' '.join(cases))
 
 class Tp(Cases):
 
@@ -102,6 +113,9 @@ class Tp(Cases):
 	@classmethod
 	def fromLine(cls, line):
 		return cls(eval(line))
+
+	def toLine(self):
+		return str(self.destination)
 
 class Player(Cases):
 
