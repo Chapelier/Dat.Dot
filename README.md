@@ -18,6 +18,6 @@ Dat.Dot se joue uniquement au clavier, mais peut demander l'usage de la souris d
 
 Il existe plusieurs type de niveaux :
 
-* les niveaux publics. Ce sont les niveaux des autres utilisateurs ajouté après test par les dévelloppeurs.
+* les niveaux publics. Ce sont les niveaux des autres utilisateurs ajouté après test par les développeurs.
 * les niveaux story. Ces niveaux servent à faire découvrir le jeu.
 * les niveaux user. Les niveaux créés par les utilisateurs avec l'éditeur de niveau.
