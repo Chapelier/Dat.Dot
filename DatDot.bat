@@ -1,3 +1,3 @@
 @echo off
-pip install -r requirements.txt
+pip install -r data/requirements.txt
 start Interface.py
