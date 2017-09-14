@@ -454,7 +454,7 @@ class Interface_LevelEditor():
 		except CheckingError as error:
 			messagebox.showerror('Error', error)
 		else:
-			if self.level.path == '"data/default_level.lvl"':
+			if self.level.path == "data/default_level.lvl":
 				# Dans le cas où on crée un niveau, on le met à la suite des autres
 				nb = 1
 				while os.path.exists(os.getcwd() + '\\levels\\user\\' + "Level {}.lvl".format(nb)):
